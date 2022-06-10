@@ -1,6 +1,7 @@
 import {View, Text, StyleSheet} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import {useState} from 'react'
+import AuthForm from './AuthForm'
 
 function AuthContent ({isLogin, onAuthenticate}) {
     
@@ -21,13 +22,12 @@ function AuthContent ({isLogin, onAuthenticate}) {
         }
     }
 
+    function submitHandler(){
+        
+    }
+
     return (
         <View>
-            <AuthForm 
-                isLogin={isLogin}
-                onSubmit={submitHandler}
-                credentialsInvalid={credentialsInvalid}
-            />
         </View>
     )
 }

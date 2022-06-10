@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { StyleSheet, View } from 'react-native'
-import Button from '../UI/Button'
+import { StyleSheet, View, Text } from 'react-native'
 import Input from  '../UI/Input'
+import Button from '../UI/Button'
 
 function AuthForm({
     isLogin,
@@ -22,7 +22,9 @@ function AuthForm({
         confirmPassword: passwordsDontMatch
     } = credentialIsInvalid
 
-    function inputChangedHandler(inputId, enteredvalue) {
-        
-    } 
+    return(
+        <View>
+            <Text> YOOO </Text>
+        </View>
+    )
 }
