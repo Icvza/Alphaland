@@ -1,51 +1,51 @@
-import {View, Text, TextInput, StyleSheet} from 'react-native'
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 function Input({
-    label, 
-    keyboardType, 
-    secure, 
+    label,
+    keyboardType,
+    secure,
     onUpdateValue,
     value,
     isInvalid,
-}){
+    }) {
     return (
         <View style={styles.inputContainer}>
             <Text style={[styles.label, isInvalid && styles.labelInvalid]}>
-            {label}
+                {label}
             </Text>
-            <TextInput 
+            <TextInput
                 style={[styles.input, isInvalid && styles.inputInvalid]}
-                autoCapitalize={false}
+                autoCapitalize={'none'}
                 keyboardType={keyboardType}
                 secureTextEntry={secure}
                 onChangeText={onUpdateValue}
                 value={value}
             />
         </View>
-    )
+);
 }
 
-export default Input
+export default Input;
 
 const styles = StyleSheet.create({
     inputContainer: {
-        marginVertical: 8
+        marginVertical: 8,
     },
     label: {
         color: 'white',
-        marginBottom: 4
+        marginBottom: 4,
     },
     labelInvalid: {
-        color: 'red'
+        color: 'red',
     },
     input: {
         paddingVertical: 8,
         paddingHorizontal: 6,
-        backgroundColor: 'purple',
+        backgroundColor: 'white',
         borderRadius: 4,
-        fondtSize: 16
-    },
+        fontSize: 16,
+    },    
     inputInvalid: {
-        backgroundColor: 'orange'
-    }
-})
+        backgroundColor: 'red',
+    },
+});
