@@ -10,3 +10,6 @@ function SwitchNavigator() {
 }
 
 export default SwitchNavigator
+
+
+// Add a method to switch between navs

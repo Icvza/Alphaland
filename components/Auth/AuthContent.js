@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, Alert} from 'react-native'
+import {View, StyleSheet, Alert} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import {useState} from 'react'
 import AuthForm from './AuthForm'

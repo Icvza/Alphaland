@@ -1,6 +1,14 @@
 import { View, Text, StyleSheet} from 'react-native'
 import AuthContent from '../../components/Auth/AuthContent'
+import createUser from '../../Utility/Auth/Auth'
+
 function SignupScreen() {
+
+    function SignupHandler(){
+        createUser()
+    }
+
+
     return (
         <View style={styles.SignupScreenContainer}>
             <AuthContent /> 
