@@ -49,6 +49,7 @@ function AuthContent ({isLogin, onAuthenticate}) {
             });
             return;
             }
+            console.log(email,password)
             onAuthenticate({ email, password });
         }    
 

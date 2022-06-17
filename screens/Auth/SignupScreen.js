@@ -1,18 +1,33 @@
-import { View, Text, StyleSheet} from 'react-native'
+import { View, StyleSheet} from 'react-native'
+import { useState } from 'react'
 import AuthContent from '../../components/Auth/AuthContent'
-import createUser from '../../Utility/Auth/Auth'
+import { createUser } from '../../Utility/Auth/Auth'
+import LoadingOverlay from '../Loading/LoadingOverlay'
 
 function SignupScreen() {
 
-    function SignupHandler(){
-        createUser()
+    const [isAuthenticating, setIsAuthenticating ] = useState(false)
+
+    async function SignupHandler({email, password}){
+        setIsAuthenticating(true)
+        try{
+        await createUser(email, password)
+        } catch(error) {
+            console.log(error.response)
+        }
+        setIsAuthenticating(false)
+    }
+
+    if(isAuthenticating){
+        return(
+            <LoadingOverlay />
+        )
     }
 
 
     return (
         <View style={styles.SignupScreenContainer}>
-            <AuthContent /> 
-            <Text>THIS IS THE SIGNUP SCREEN </Text>
+            <AuthContent  onAuthenticate={SignupHandler}/> 
         </View>
     )
 }
