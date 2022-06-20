@@ -11,7 +11,8 @@ async function userAuth(mode, email, password){
             email: email,
             password: password,
             returnSecureToken: true 
-        }
+        },
+    console.log(response.data)
     )
 }
 
@@ -21,4 +22,5 @@ export async function createUser(email, password){
 
 export async function login(email, password) {
     await userAuth('signInWithPassword', email, password)
+    console.log('LOGED IN')
 }
