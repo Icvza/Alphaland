@@ -13,7 +13,7 @@ function SignupScreen() {
         try{
         await createUser(email, password)
         } catch(error) {
-            console.log(error.response)
+            console.log('Signup',error.data)
         }
         setIsAuthenticating(false)
     }

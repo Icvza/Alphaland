@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import { View, Text, StyleSheet} from 'react-native'
 import AuthContent from '../../components/Auth/AuthContent'
-import { login } from '../../Utility/Auth/Auth'
+import { loginUser } from '../../Utility/Auth/Auth'
 function LoginScreen() {
 
     const [isLogingIn, setIsLogingIn] = useState(false)
 
-    async function LoginHandler (email, password) {
+    async function LoginHandler({email, password}){
         setIsLogingIn(true)
         try{
-        await login (email, password)
+        await loginUser(email, password)
         } catch(error) {
-            console.log('error', error.message)
+            console.log('Login Error', error)
         }
         setIsLogingIn(false)
     }

@@ -30,9 +30,9 @@ function AuthContent ({isLogin, onAuthenticate}) {
         password = password.trim()
 
         const emailIsValid = email.includes('@')
-        const passwordIsValid = password.length > 4
+        const passwordIsValid = password.length > 6
         const emailsAreEqual = email === confirmEmail
-        const passwordsAreEqual = password = confirmPassword
+        const passwordsAreEqual = password === confirmPassword
 
 
         if (
@@ -49,7 +49,7 @@ function AuthContent ({isLogin, onAuthenticate}) {
             });
             return;
             }
-            console.log(email,password)
+            //console.log('validatiun', email, password)
             onAuthenticate({ email, password });
         }    
 
