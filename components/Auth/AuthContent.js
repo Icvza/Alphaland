@@ -73,11 +73,14 @@ export default AuthContent
 
 const styles = StyleSheet.create({
     authContent: {
-        marginTop: 64,
+        justifyContent:'center',
+        alignContent: 'center',
+        justifyContent: 'center',
+        marginTop: 300,
         marginHorizontal: 32,
         padding: 16,
         borderRadius: 8,
-        backgroundColor: 'blue',
+        backgroundColor: '#7F7979',
         elevation: 2,
         shadowColor: 'black',
         shadowOffset: { width: 1, height: 1 },

@@ -27,9 +27,10 @@ export default LoginScreen
 
 styles = StyleSheet.create({
     LoginScreenContainer: {
-        fles: 1,
+        flex: 1,
         alignContent: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        
     }
 })
 
