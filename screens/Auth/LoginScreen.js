@@ -19,7 +19,6 @@ function LoginScreen() {
     return (
         <View style={styles.LoginScreenContainer}>
             <AuthContent isLogin onAuthenticate={LoginHandler} />
-            <Text>THIS IS THE LOGIN SCREEN </Text>
         </View>
     )
 }
