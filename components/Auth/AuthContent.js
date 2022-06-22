@@ -1,8 +1,9 @@
-import {View, StyleSheet, Alert} from 'react-native'
+import {View, StyleSheet, Alert, Text} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import {useState} from 'react'
 import AuthForm from './AuthForm'
 import FlatButton from '../UI/FlatButton'
+import { Video } from 'expo-av'
 
 function AuthContent ({isLogin, onAuthenticate}) {
     

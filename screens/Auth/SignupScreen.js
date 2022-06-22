@@ -3,6 +3,7 @@ import { useState } from 'react'
 import AuthContent from '../../components/Auth/AuthContent'
 import { createUser } from '../../Utility/Auth/Auth'
 import LoadingOverlay from '../Loading/LoadingOverlay'
+import AuthVideo from './AuthVideo'
 
 function SignupScreen() {
 
@@ -27,6 +28,7 @@ function SignupScreen() {
 
     return (
         <View style={styles.SignupScreenContainer}>
+            <AuthVideo />
             <AuthContent  onAuthenticate={SignupHandler}/> 
         </View>
     )
