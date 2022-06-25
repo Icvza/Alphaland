@@ -1,4 +1,4 @@
-import { View, StyleSheet} from 'react-native'
+import { View, StyleSheet, } from 'react-native'
 import { useState } from 'react'
 import AuthContent from '../../components/Auth/AuthContent'
 import { createUser } from '../../Utility/Auth/Auth'
@@ -37,9 +37,5 @@ function SignupScreen() {
 export default SignupScreen
 
 styles = StyleSheet.create({
-    SignupScreenContainer: {
-        fles: 1,
-        alignContent: 'center',
-        justifyContent: 'center'
-    }
+
 })

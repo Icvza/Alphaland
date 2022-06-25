@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import { View, Text, StyleSheet} from 'react-native'
+import { View, StyleSheet} from 'react-native'
 import AuthContent from '../../components/Auth/AuthContent'
 import { loginUser } from '../../Utility/Auth/Auth'
 import AuthVideo from './AuthVideo'
+import Logo from '../../components/Media/AlphalandCircleLogo'
+
 function LoginScreen() {
 
     const [isLogingIn, setIsLogingIn] = useState(false)
@@ -19,6 +21,7 @@ function LoginScreen() {
 
     return (
         <View style={styles.LoginScreenContainer}>
+            
             <AuthVideo />
             <AuthContent isLogin onAuthenticate={LoginHandler} />
         </View>
@@ -28,10 +31,6 @@ function LoginScreen() {
 export default LoginScreen
 
 styles = StyleSheet.create({
-    LoginScreenContainer: {
-        flex: 1,
-        alignContent: 'center',
-        justifyContent: 'center',
-    }
+
 })
 

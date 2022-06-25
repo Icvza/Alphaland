@@ -1,48 +1,74 @@
-import React, {useRef, useState}from "react";
+import React from "react";
 import { Video } from 'expo-av'
-import {Text, View, StyleSheet} from 'react-native'
+import { StyleSheet, Dimensions, View, Text} from 'react-native'
+import { useRef, useState } from 'react';
+import styled from "styled-components/native";
+const {height} = Dimensions.get("window")
 
-
-function AuthVideo (){
+function AuthVideo () {
 
     const video = useRef(null)
-    const [status, setStatus] = useState({})
+    const [status, setStatus] = useState({}) 
 
     return(
-        <View style = {styles.container}> 
+        <View style={styles.cont}>
             <Video 
                 ref={video}
-                style={styles.videoContainer}
-                source={{uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4"}}
-                rate={1}
-                shouldPlay={true}
                 isLooping={true}
-                volume={1}
-                muted={true}
-                resizeMode="cover"
+                style={styles.Video}
+                //source={require('../../Constants/Media/Alphalete.mp4')}
                 onPlaybackStatusUpdate={setStatus}
+                muted={true}
+                //repeat={true}
+                shouldPlay={true}
+                resizeMode={"cover"}
+                //rate={1.0}
+                //ignoreSilentSwitch={"obey"}
+                //onPlaybackStatusUpdate={(status) => setStatus(() => status)}
             />
-            <Text style={styles.text}>HELLO</Text>
+            <Wrapper>
+                <Logo
+                    source={require("../../Constants/Media/alphaland.png")}
+                    width={50}
+                    height={50}
+                    resizeMode="contain"
+                />
+            </Wrapper>
+
         </View>
     )
 }
 
+export const Wrapper = styled.View`
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+`;
+export const Logo = styled.Image`
+    max-width: 300px;
+    width: 300px;
+    height: 250px;
+`;
+
 export default AuthVideo
 
+
 const styles = StyleSheet.create({
-    container: {
+    cont:{
         flex: 1,
-        justifyContent: 'center',
-        paddingTop: 0,
-        backgroundColor: '#ecf0f1',
-        padding: 8,
+        alignContent: 'center',
+        justifyContent: 'center'
     },
-    videoContainer: {
-        position: 'absolute',
+    Video: {
+        height: height,
+        position: "absolute",
         top: 0,
         left: 0,
+        alignItems: "stretch",
         bottom: 0,
-        right: 0,
-    },
-    
+        right: 0
+    }
 })
+
+
