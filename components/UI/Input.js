@@ -1,4 +1,5 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { BlurView } from 'expo-blur';
 
 function Input({
     label,
@@ -13,14 +14,18 @@ function Input({
             <Text style={[styles.label, isInvalid && styles.labelInvalid]}>
                 {label}
             </Text>
-            <TextInput
-                style={[styles.input, isInvalid && styles.inputInvalid]}
-                autoCapitalize={'none'}
-                keyboardType={keyboardType}
-                secureTextEntry={secure}
-                onChangeText={onUpdateValue}
-                value={value}
-            />
+            <View style={styles.inputWrapper}>
+                <BlurView intensity={25} style={styles.blur1}>
+                    <TextInput
+                        style={[styles.input, isInvalid && styles.inputInvalid]}
+                        autoCapitalize={'none'}
+                        keyboardType={keyboardType}
+                        secureTextEntry={secure}
+                        onChangeText={onUpdateValue}
+                        value={value}
+                    />
+                </BlurView>
+            </View>
         </View>
 );
 }
@@ -28,6 +33,13 @@ function Input({
 export default Input;
 
 const styles = StyleSheet.create({
+    inputWrapper: {
+        width: "100%",
+        height: 45,
+        //backgroundColor: "rgba(20, 15, 38, 0.648579)",
+        borderRadius: 20,
+        overflow: "hidden",
+    },
     inputContainer: {
         marginVertical: 8,
     },
@@ -39,11 +51,12 @@ const styles = StyleSheet.create({
         color: 'red',
     },
     input: {
+        height: '100%',
         paddingVertical: 8,
-        paddingHorizontal: 6,
-        backgroundColor: 'white',
-        borderRadius: 4,
+        paddingHorizontal: 20,
+        borderRadius: 20,
         fontSize: 16,
+        backgroundColor:'transparent'
     },    
     inputInvalid: {
         backgroundColor: 'red',

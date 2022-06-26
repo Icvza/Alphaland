@@ -16,7 +16,7 @@ function AuthVideo () {
                 ref={video}
                 isLooping={true}
                 style={styles.Video}
-                //source={require('../../Constants/Media/Alphalete.mp4')}
+                source={require('../../Constants/Media/Alphalete.mp4')}
                 onPlaybackStatusUpdate={setStatus}
                 muted={true}
                 //repeat={true}

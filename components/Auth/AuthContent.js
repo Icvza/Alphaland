@@ -4,6 +4,7 @@ import {useState} from 'react'
 import AuthForm from './AuthForm'
 import FlatButton from '../UI/FlatButton'
 import { Video } from 'expo-av'
+import { BlurView } from 'expo-blur'
 
 function AuthContent ({isLogin, onAuthenticate}) {
     
@@ -55,18 +56,21 @@ function AuthContent ({isLogin, onAuthenticate}) {
         }    
 
     return (
-        <View style={styles.authContent}>
-            <AuthForm
-                isLogin={isLogin}
-                onSubmit={submitHandler}
-                credentialsInvalid={credentialsInvalid}
-            />
-            <View style={styles.buttons}>
-                <FlatButton onPress={switchAuthModeHandler}>
-                {isLogin ? 'Create a new user' : 'Log in instead'}
-                </FlatButton>
+
+            <View style={styles.authContent}>
+
+                <AuthForm
+                    isLogin={isLogin}
+                    onSubmit={submitHandler}
+                    credentialsInvalid={credentialsInvalid}
+                />
+                <View style={styles.buttons}>
+                    <FlatButton onPress={switchAuthModeHandler}>
+                    {isLogin ? 'Create a new user' : 'Log in instead'}
+                    </FlatButton>
+                </View>
             </View>
-        </View>
+        
     )
 }
 
@@ -77,11 +81,13 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignContent: 'center',
         justifyContent: 'center',
-        marginTop: 300,
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop: 525,
         marginHorizontal: 32,
         padding: 16,
         borderRadius: 8,
-        backgroundColor: '#403E42',
+        backgroundColor: 'transparent',
         elevation: 2,
         shadowColor: 'black',
         shadowOffset: { width: 1, height: 1 },
@@ -89,6 +95,6 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
     },
     buttons: {
-        marginTop: 8,
+        marginTop: 20,
     },
 });

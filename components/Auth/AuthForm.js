@@ -45,6 +45,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
     <View style={styles.form}>
         <View>
             <Input
+                style={styles.inputblur}
                 label="Email Address"
                 onUpdateValue={updateInputValueHandler.bind(this, 'email')}
                 value={enteredEmail}
@@ -92,7 +93,18 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
 export default AuthForm;
 
 const styles = StyleSheet.create({
+    inputblur:{
+        borderRadius: 30,
+        paddingVertical: 6,
+        paddingHorizontal: 12,
+    },
     buttons: {
         marginTop: 12,
+        alignContent: 'center',
+        justifyContent: 'center'
     },
+    form:{
+        justifyContent:'center',
+        alignItems:'center'
+    }
 });
