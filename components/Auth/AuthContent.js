@@ -3,8 +3,6 @@ import { useNavigation } from '@react-navigation/native'
 import {useState} from 'react'
 import AuthForm from './AuthForm'
 import FlatButton from '../UI/FlatButton'
-import { Video } from 'expo-av'
-import { BlurView } from 'expo-blur'
 
 function AuthContent ({isLogin, onAuthenticate}) {
     
@@ -48,17 +46,15 @@ function AuthContent ({isLogin, onAuthenticate}) {
                 confirmEmail: !emailIsValid || !emailsAreEqual,
                 password: !passwordIsValid,
                 confirmPassword: !passwordIsValid || !passwordsAreEqual,
-            });
-            return;
+            })
+            return
             }
-            //console.log('validatiun', email, password)
             onAuthenticate({ email, password });
         }    
 
     return (
-
+        <View style={styles.container}>
             <View style={styles.authContent}>
-
                 <AuthForm
                     isLogin={isLogin}
                     onSubmit={submitHandler}
@@ -70,7 +66,7 @@ function AuthContent ({isLogin, onAuthenticate}) {
                     </FlatButton>
                 </View>
             </View>
-        
+        </View>
     )
 }
 

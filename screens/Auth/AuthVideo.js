@@ -14,11 +14,11 @@ function AuthVideo () {
         <View style={styles.cont}>
             <Video 
                 ref={video}
+                isMuted={true}
                 isLooping={true}
                 style={styles.Video}
                 source={require('../../Constants/Media/Alphalete.mp4')}
                 onPlaybackStatusUpdate={setStatus}
-                muted={true}
                 //repeat={true}
                 shouldPlay={true}
                 resizeMode={"cover"}

@@ -29,7 +29,7 @@ function SignupScreen() {
     return (
         <View style={styles.SignupScreenContainer}>
             <AuthVideo />
-            <AuthContent  onAuthenticate={SignupHandler}/> 
+            <AuthContent  onAuthenticate={SignupHandler} stytle={styles.AuthContent}/> 
         </View>
     )
 }
