@@ -4,8 +4,9 @@ import {useState} from 'react'
 import AuthForm from './AuthForm'
 import FlatButton from '../UI/FlatButton'
 
-function AuthContent ({isLogin, onAuthenticate}) {
-    
+
+function AuthContent ({isLogin, onAuthenticate, BottomFeeder}) {
+        
     const navigation = useNavigation()
 
     const[credentialsInvalid, setCredentialsInvalid] = useState({
@@ -54,7 +55,7 @@ function AuthContent ({isLogin, onAuthenticate}) {
 
     return (
         <View style={styles.container}>
-            <View style={styles.authContent}>
+            <View style={styles.authContent && isLogin? styles.left : styles.right } >
                 <AuthForm
                     isLogin={isLogin}
                     onSubmit={submitHandler}
@@ -72,7 +73,44 @@ function AuthContent ({isLogin, onAuthenticate}) {
 
 export default AuthContent
 
+
 const styles = StyleSheet.create({
+    left:{
+        justifyContent:'center',
+        alignContent: 'center',
+        justifyContent: 'center',
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop: 525,
+        marginHorizontal: 32,
+        padding: 16,
+        borderRadius: 8,
+        backgroundColor: 'transparent',
+        elevation: 2,
+        shadowColor: 'black',
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.35,
+        shadowRadius: 4,
+        bottom: 0
+    },
+    right:{
+        justifyContent:'center',
+        alignContent: 'center',
+        justifyContent: 'center',
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop: 525,
+        marginHorizontal: 32,
+        padding: 16,
+        borderRadius: 8,
+        backgroundColor: 'transparent',
+        elevation: 2,
+        shadowColor: 'black',
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.35,
+        shadowRadius: 4,
+        bottom: 90
+    },
     authContent: {
         justifyContent:'center',
         alignContent: 'center',
@@ -89,6 +127,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 1, height: 1 },
         shadowOpacity: 0.35,
         shadowRadius: 4,
+        bottom: 0
     },
     buttons: {
         marginTop: 20,

@@ -23,7 +23,7 @@ function LoginScreen() {
     return (
             <View style={styles.LoginScreenContainer}>
                 <AuthVideo  />
-                <AuthContent isLogin onAuthenticate={LoginHandler}  style={styles.AuthContent}/>
+                <AuthContent isLogin onAuthenticate={LoginHandler}  style={styles.AuthContent} />
             </View>
     )
 }
