@@ -18,8 +18,8 @@ function LoginScreen() {
             authContent.authenticate(token)
         } catch(error) {
             console.log('Login Error', error)
+            setIsAuthenticating(false)
         }
-        setIsLogingIn(false)
     }
 
     return (

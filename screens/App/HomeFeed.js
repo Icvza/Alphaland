@@ -1,10 +1,10 @@
 import {View, Text, StyleSheet } from 'react-native'
 
 function HomeFeed(){
-     return( 
-     <View style={styles.HomeFeedContainer}>
-          <Text>WELCOME SCREE</Text>
-     </View>
+     return (
+          <View>
+               <Text> HOMEFEED</Text>
+          </View>
      )
 }
 

@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import AuthStack from "./AuthStack";
-import AppStack from './AppStack'
+import AppEntrance from './AppEntrance'
 import {useContext} from 'react'
 import { AuthContext } from "../store/auth-context";
 
@@ -12,7 +12,7 @@ function SwitchNavigator() {
     return (
             <NavigationContainer>
                 {!authContext.isAuthenticated &&<AuthStack />}
-                {authContext.isAuthenticated &&<AppStack />}
+                {authContext.isAuthenticated &&<AppEntrance />}
             </NavigationContainer>
     )
 }

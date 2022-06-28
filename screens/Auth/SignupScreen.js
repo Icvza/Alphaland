@@ -18,8 +18,9 @@ function SignupScreen() {
         authContext.authenticate(token)
         } catch(error) {
             console.log('Signup',error.data)
+            setIsAuthenticating(false)
         }
-        setIsAuthenticating(false)
+
     }
 
     if(isAuthenticating){

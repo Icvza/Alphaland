@@ -1,7 +1,16 @@
+
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+
+
 import HomeFeed from '../screens/App/HomeFeed'
 
-function AppStack(){
+
+
+
+
+function AppEntrance(){
 
      const Stack = createNativeStackNavigator()
 
@@ -12,4 +21,4 @@ function AppStack(){
      )
 }
 
-export default AppStack
+export default AppEntrance
