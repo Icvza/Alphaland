@@ -1,24 +1,36 @@
-
-
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-
-
-
-import HomeFeed from '../screens/App/HomeFeed'
-
-
-
-
+import { createDrawerNavigator } from '@react-navigation/drawer'
+import BottomTabNav from './BottomNav'
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+function getHeaderTitle(route) {
+     const routeName =  getFocusedRouteNameFromRoute(route) ?? 'home'
+     switch (routeName) {
+          case 'home':
+               return 'home'
+          case 'CheckIn':
+               return 'Check-in'
+     }
+}
 
 function AppEntrance(){
 
-     const Stack = createNativeStackNavigator()
-
+     const Drawer = createDrawerNavigator()
      return(
-          <Stack.Navigator>
-               <Stack.Screen name='HomeFeed' component={HomeFeed} />
-          </Stack.Navigator>
+          <Drawer.Navigator
+          screenOptions={({navigation})=> ({
+               headerShown: true,
+               headerTransparent: true
+          })}
+          >
+               <Drawer.Screen 
+                    name='BottomTab' 
+                    component={BottomTabNav} 
+                    options={({route}) => ({
+                         headerTitle: getHeaderTitle(route),
+                    })}
+               />
+          </Drawer.Navigator>
      )
 }
+
 
 export default AppEntrance
