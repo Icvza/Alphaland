@@ -8,7 +8,7 @@ import AppLoading from 'expo-app-loading'
 function Root () {
   const [isTryingLogin, setIstryingLogin] = useState(true)
   const authContext = useContext(AuthContext)
-
+  
   useEffect(() => {
     async function fetchToken() {
       const storedToken = await AsyncStorage.getItem('token')

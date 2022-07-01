@@ -1,4 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native'
+
+
 function UpcomingClasses (){
      return(
           <View style={styles.UpcomingContainer}>
