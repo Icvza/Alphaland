@@ -3,7 +3,7 @@ import AuthStack from "./AuthStack";
 import AppEntrance from './AppEntrance'
 import {useContext} from 'react'
 import { AuthContext } from "../store/auth-context";
-
+import RightDrawer from "./RightDrawer";
 
 function SwitchNavigator() {
 
@@ -12,7 +12,7 @@ function SwitchNavigator() {
     return (
             <NavigationContainer>
                 {!authContext.isAuthenticated &&<AuthStack />}
-                {authContext.isAuthenticated &&<AppEntrance />}
+                {authContext.isAuthenticated &&<RightDrawer />}
             </NavigationContainer>
     )
 }
