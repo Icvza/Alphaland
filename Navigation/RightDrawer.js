@@ -1,5 +1,7 @@
+import { View, Text } from 'react-native'
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import AppEntrance from "./AppEntrance";
+
 const DrawerRight = createDrawerNavigator()
 
 function RightDrawer () {
@@ -7,10 +9,19 @@ function RightDrawer () {
           <DrawerRight.Navigator
                useLegacyImplementation
                id="RightDrawer"
-               screenOptions={{drawerPosition: 'right'}}
+               drawerContent={(props) => <RightDrawerContent {...props} />}
+               screenOptions={{drawerPosition: 'right', headerShown: false,}}
           >
                <DrawerRight.Screen name='home' component={AppEntrance} />
           </DrawerRight.Navigator>
+     )
+}
+
+function RightDrawerContent() {
+     return (
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+               <Text>This is the right drawer</Text>
+          </View>
      )
 }
 

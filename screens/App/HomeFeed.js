@@ -1,4 +1,4 @@
-import {View, Dimensions, StyleSheet, ImageBackground, Text} from 'react-native'
+import {View, Dimensions, StyleSheet, ImageBackground, Text, Button} from 'react-native'
 import CalendarSnippet from '../../components/HomeScreen/CalendarSnippet'
 import FeaturedMeal from '../../components/HomeScreen/FeaturedMeal'
 import UpcomingClasses from '../../components/HomeScreen/UpcomingClasses'

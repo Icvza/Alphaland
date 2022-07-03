@@ -4,26 +4,25 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import IconButton from '../components/UI/IconButton';
 import AlphLandCircle from '../components/Media/AlphalandCircleLogo';
 import { Text } from 'react-native'
-import ProfileStack from './ProfileStack'
+
 function getHeaderTitle(route) {
+
      const routeName =  getFocusedRouteNameFromRoute(route) ?? 'home'
+
      switch (routeName) {
           case 'home':
                return 'home'
           case 'CheckIn':
                return <Text>Check-in</Text>
      }
+
 }
 
-function openProfile(){
-     return(
-          <ProfileStack />
-     )
-}
 
-function AppEntrance(){
+function AppEntrance({navigation}){
 
      const Drawer = createDrawerNavigator()
+
      return(
           <Drawer.Navigator
           screenOptions={({navigation})=> ({
@@ -34,7 +33,7 @@ function AppEntrance(){
                          icon='ios-person-circle-outline' 
                          size={30} 
                          color={'white'}
-                         onPress={openProfile}
+                         onPress={() => navigation.getParent('RightDrawer').openDrawer()}
                     />,
           })}
           >
@@ -47,6 +46,7 @@ function AppEntrance(){
                />
           </Drawer.Navigator>
      )
+
 }
 
 function routeOrLogo (route) {
@@ -56,9 +56,6 @@ function routeOrLogo (route) {
           return (getHeaderTitle(route))
      }
 }
-
-//console.log(getHeaderTitle(route))
-
 
 export default AppEntrance
 
