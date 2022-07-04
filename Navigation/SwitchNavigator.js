@@ -11,8 +11,8 @@ function SwitchNavigator() {
     
     return (
             <NavigationContainer>
-                {!authContext.isAuthenticated &&<AuthStack />}
-                {authContext.isAuthenticated &&<RightDrawer />}
+                {!authContext.isAuthenticated && <AuthStack />}
+                {authContext.isAuthenticated && <RightDrawer />}
             </NavigationContainer>
     )
 }

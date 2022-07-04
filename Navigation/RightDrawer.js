@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import AppEntrance from "./AppEntrance";
 import { DrawerContent } from '../components/RightDrawer/RightDrawerContent'
+
 const DrawerRight = createDrawerNavigator()
 
 function RightDrawer () {
@@ -17,12 +17,6 @@ function RightDrawer () {
      )
 }
 
-function RightDrawerContent() {
-     return (
-          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-               <Text>This is the right drawer</Text>
-          </View>
-     )
-}
+
 
 export default RightDrawer
