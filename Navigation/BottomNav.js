@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeFeed from "../screens/App/HomeFeed";
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons'
 import CheckIn from "../screens/App/CheckIn";
 const BottomTab = createBottomTabNavigator()
 
@@ -24,6 +24,26 @@ function BottomTabNav() {
                     tabBarIcon: ({color, size}) => 
                          <Ionicons name="ios-barcode-outline" size={size} color={color} />,
                     title: 'Check-in',
+                    headerShown: false
+               }}
+          />
+          <BottomTab.Screen
+               name='Alpha Eats'
+               component={() => {}}
+               options={{
+                    tabBarIcon: ({color, size}) => 
+                         <MaterialCommunityIcons name="food-variant" size={size} color={color} />,
+                    title: 'Alpha Eats',
+                    headerShown: false
+               }}
+          />
+          <BottomTab.Screen
+               name='Classes'
+               component={() => {}}
+               options={{
+                    tabBarIcon: ({color, size}) => 
+                         <FontAwesome name="group" size={size} color={color} />,
+                    title: 'Classes',
                     headerShown: false
                }}
           />
