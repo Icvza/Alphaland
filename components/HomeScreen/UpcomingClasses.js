@@ -1,16 +1,21 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import ClassesList from '../Classes/ClassesList'
-import { Classes } from '../../DummyData'
-
+import { CLASSES } from '../../DummyData'
 function UpcomingClasses ({Classes}){
      console.log(Classes)
      return(
-          <ClassesList Classes={Classes}></ClassesList>
+          <View style={styles.container}>
+               <ClassesList Classes={CLASSES}></ClassesList>
+          </View>
      )
 
 }
 export default UpcomingClasses
 
 const styles = StyleSheet.create({
-
+     container: {
+          padding: 24,
+          backgroundColor: 'orange',
+          flexGrow: 1
+     }, 
 })

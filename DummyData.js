@@ -31,15 +31,15 @@ export const Classez ={
      }
 }
 
-export const Classes = [
+export const CLASSES = [
      {
           id:'Yoga',
-          ingredients: ['BrentFiaz','Drake', 'ChrisBum'],
+          instructors: ['BrentFiaz','Drake', 'ChrisBum'],
           category: 'onTheRoadToOCKY'
      },
      {
           id:'Boxing',
-          ingredients: ['Future','Drake', 'ChrisBum'],
-          category: 'onTheRoadToROCKYBABABOLA'
+          instructors: ['Future','Drake', 'ChrisBum'],
+          category: 'ROCKYBABABOLA'
      },
 ]

@@ -1,8 +1,25 @@
 import {FlatList} from 'react-native'
+import Class from '../Classes/Class'
 
-function ClassesList (){
+
+
+
+function RenderClasses(itemData) {
+    console.log(itemData)
     return (
-        <FlatList ></FlatList>
+        <Class {...itemData.item} />
+    )
+
+}
+
+
+function ClassesList({Classes}){
+    return (
+        <FlatList 
+            style={{borderWidth: 4, borderColor: 'pink'}}
+            data={Classes}
+            renderItem={RenderClasses}
+        />
     )
 }
 
