@@ -2,6 +2,7 @@ import {View, Dimensions, StyleSheet, ImageBackground, Text, Button} from 'react
 import CalendarSnippet from '../../components/HomeScreen/CalendarSnippet'
 import FeaturedMeal from '../../components/HomeScreen/FeaturedMeal'
 import UpcomingClasses from '../../components/HomeScreen/UpcomingClasses'
+import { Classes } from '../../DummyData'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height*0.36
@@ -20,6 +21,7 @@ function Greeting(){
 }
 
 function HomeFeed(){
+     console.log(Classes)
      return (
           <View style={styles.HomeFeedContainer}>
                <Greeting />

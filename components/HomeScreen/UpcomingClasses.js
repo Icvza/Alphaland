@@ -1,12 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
+import ClassesList from '../Classes/ClassesList'
+import { Classes } from '../../DummyData'
 
-
-function UpcomingClasses (){
+function UpcomingClasses ({Classes}){
+     console.log(Classes)
      return(
-          <View style={styles.UpcomingContainer}>
-               <Text> UPCOMING</Text>
-          </View>
+          <ClassesList Classes={Classes}></ClassesList>
      )
+
 }
 export default UpcomingClasses
 

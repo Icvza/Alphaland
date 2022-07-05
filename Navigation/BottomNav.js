@@ -43,7 +43,7 @@ function BottomTabNav() {
                options={{
                     tabBarIcon: ({color, size}) => 
                          <FontAwesome name="group" size={size} color={color} />,
-                    title: 'Classes',
+                    title: 'Classesx',
                     headerShown: false
                }}
           />
