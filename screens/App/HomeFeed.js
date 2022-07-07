@@ -3,7 +3,7 @@ import CalendarSnippet from '../../components/HomeScreen/CalendarSnippet'
 import FeaturedMeal from '../../components/HomeScreen/FeaturedMeal'
 import UpcomingClasses from '../../components/HomeScreen/UpcomingClasses'
 import { Classes } from '../../DummyData'
-
+import { GlobalStyles } from '../../Constants/colors'
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height*0.36
 
@@ -25,7 +25,7 @@ function HomeFeed(){
      return (
           <View style={styles.HomeFeedContainer}>
                <Greeting />
-               <CalendarSnippet />
+               <CalendarSnippet style={styles.calendar}/>
                <UpcomingClasses />
                <FeaturedMeal />
           </View>
@@ -37,13 +37,15 @@ export default HomeFeed
 const styles = StyleSheet.create({
      HomeFeedContainer: {
           flex: 1,
-          backgroundColor: 'green',
-          borderWidth: 2,
-          borderColor:'yellow',
+          backgroundColor: GlobalStyles.colors.secondaryColor
      },
      ImageContainer:{
-          borderWidth: 3,
-          borderColor: 'pink',
+          borderRadius: 6, 
+          elevation: 3,
+          shadowColor: 'blue',
+          shadowRadius: 4,
+          shadowOffset: { width: 1, height: 2},
+          shadowOpacity: 0.4,
      },
      Image: {
           height: height,
@@ -53,11 +55,14 @@ const styles = StyleSheet.create({
      GreetingText:{
           color: 'white',
           textAlign: 'center',
-          borderWidth: 3,
-          borderColor: 'blue',
           alignSelf: 'flex-start',
-          padding: 15,
+          padding: 10,
+          marginBottom: 40,
           fontSize: 20
+     },
+     calendar: {
+          borderWidth: 3,
+          borderColor: 'green'
      }
 })
 

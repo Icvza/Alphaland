@@ -15,7 +15,6 @@ export default UpcomingClasses
 const styles = StyleSheet.create({
      container: {
           padding: 24,
-          backgroundColor: 'orange',
           flexGrow: 1
      }, 
 })

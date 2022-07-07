@@ -4,7 +4,7 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import IconButton from '../components/UI/IconButton';
 import AlphLandCircle from '../components/Media/AlphalandCircleLogo';
 import { Text } from 'react-native'
-
+import { GlobalStyles } from '../Constants/colors'
 function getHeaderTitle(route) {
 
      const routeName =  getFocusedRouteNameFromRoute(route) ?? 'home'
@@ -28,11 +28,12 @@ function AppEntrance({navigation}){
           screenOptions={({navigation})=> ({
                headerShown: true,
                headerTransparent: true,
+               headerTintColor: GlobalStyles.colors.Tertiary,
                headerRight: ({tintColor}) => 
                     <IconButton 
                          icon='ios-person-circle-outline' 
                          size={30} 
-                         color={'white'}
+                         color={GlobalStyles.colors.tertiaryColor}
                          onPress={() => navigation.getParent('RightDrawer').openDrawer()}
                     />,
           })}

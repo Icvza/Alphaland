@@ -16,7 +16,6 @@ function RenderClasses(itemData) {
 function ClassesList({Classes}){
     return (
         <FlatList 
-            style={{borderWidth: 4, borderColor: 'pink'}}
             data={Classes}
             renderItem={RenderClasses}
         />
