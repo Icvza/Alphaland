@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeFeed from "../screens/App/HomeFeed";
 import { Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons'
 import CheckIn from "../screens/App/CheckIn";
+import { GlobalStyles } from "../Constants/colors";
 const BottomTab = createBottomTabNavigator()
 
 function BottomTabNav() { 
@@ -12,7 +13,7 @@ function BottomTabNav() {
                     component={HomeFeed}
                     options={{
                          tabBarIcon: ({color, size}) => 
-                              <Ionicons name='home' size={size} color={color}/>,
+                              <Ionicons name='home' size={size} color={GlobalStyles.colors.tertiaryColor}/>,
                          title: 'home',
                          headerShown: false 
                }}
@@ -22,7 +23,7 @@ function BottomTabNav() {
                component={CheckIn}
                options={{
                     tabBarIcon: ({color, size}) => 
-                         <Ionicons name="ios-barcode-outline" size={size} color={color} />,
+                         <Ionicons name="ios-barcode-outline" size={size} color={GlobalStyles.colors.tertiaryColor}/>,
                     title: 'Check-in',
                     headerShown: false
                }}
@@ -32,7 +33,7 @@ function BottomTabNav() {
                component={() => {}}
                options={{
                     tabBarIcon: ({color, size}) => 
-                         <MaterialCommunityIcons name="food-variant" size={size} color={color} />,
+                         <MaterialCommunityIcons name="food-variant" size={size} color={GlobalStyles.colors.tertiaryColor} />,
                     title: 'Alpha Eats',
                     headerShown: false
                }}
@@ -42,7 +43,7 @@ function BottomTabNav() {
                component={() => {}}
                options={{
                     tabBarIcon: ({color, size}) => 
-                         <FontAwesome name="group" size={size} color={color} />,
+                         <FontAwesome name="group" size={size} color={GlobalStyles.colors.tertiaryColor}/>,
                     title: 'Classesx',
                     headerShown: false
                }}

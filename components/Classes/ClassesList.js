@@ -1,11 +1,7 @@
-import {FlatList} from 'react-native'
+import {FlatList, View} from 'react-native'
 import Class from '../Classes/Class'
 
-
-
-
 function RenderClasses(itemData) {
-    console.log(itemData)
     return (
         <Class {...itemData.item} />
     )
@@ -15,11 +11,14 @@ function RenderClasses(itemData) {
 
 function ClassesList({Classes}){
     return (
-        <FlatList 
+        <FlatList
+            //style={{borderWidth: 3, flexDirection: 'grow'}}
             data={Classes}
             renderItem={RenderClasses}
         />
+
     )
 }
 
 export default ClassesList
+

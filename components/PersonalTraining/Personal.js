@@ -3,11 +3,12 @@ import { Avatar, IconButton, Card, Button } from 'react-native-paper'
 import { EvilIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { GlobalStyles } from '../../Constants/colors'
-function Class ({id, category, instructors }){
+
+function Personal ({id, time }){
 
      function CardTitle (input){
           return(
-               <Text style={{fontSize: 16, }}>{input}</Text>
+               <Text style={{fontSize: 16}}>{input}</Text>
           )
      }
 
@@ -20,16 +21,16 @@ function Class ({id, category, instructors }){
                >
                     <Card.Title
                          style={styles.Title}
-                         title={CardTitle(category)}
+                         title={CardTitle(id)}
                          subtitle={id + ' Tuesday 3:30Pm'}
-                         left={(props) => <Avatar.Icon {...props} icon="account-group" />}
+                         left={(props) => <Avatar.Icon {...props} icon="account-multiple" />}
                          right={(props) => <Card.Actions 
                                                   style={styles.ActionContainer}>
                                              <Button 
                                                   style={styles.Button}
                                                   mode='contained'>{<EvilIcons name='calendar' size={27} />}
                                              </Button>
-                                             <Button style={styles.secondButton}>ok</Button>
+                                             <Button style={styles.Button}>ok</Button>
                                         </Card.Actions>}
                     />
                </Card>
@@ -38,7 +39,7 @@ function Class ({id, category, instructors }){
 
 }
 
-export default Class 
+export default Personal
 
 const styles = StyleSheet.create({
      ClassMainCont: {
@@ -58,11 +59,13 @@ const styles = StyleSheet.create({
           padding: 0,
           marginVertical: 8 ,
           backgroundColor: GlobalStyles.colors.secondaryColor,
+          flexDirection: "row",
+          justifyContent: 'space-between',
      },
      ActionContainer: {
           
      },
      Button:{
-          backgroundColor: GlobalStyles.colors.tertiaryColor
+          
      }
 });

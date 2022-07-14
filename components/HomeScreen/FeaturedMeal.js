@@ -1,4 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native'
+
+
 function FeaturedMeal (){
      return(
           <View style={styles.FeaturedMeal}>
@@ -6,6 +8,7 @@ function FeaturedMeal (){
           </View>
      )
 }
+     
 export default FeaturedMeal
 
 const styles = StyleSheet.create({

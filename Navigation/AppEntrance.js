@@ -28,7 +28,7 @@ function AppEntrance({navigation}){
           screenOptions={({navigation})=> ({
                headerShown: true,
                headerTransparent: true,
-               headerTintColor: GlobalStyles.colors.Tertiary,
+               headerTintColor: GlobalStyles.colors.tertiaryColor,
                headerRight: ({tintColor}) => 
                     <IconButton 
                          icon='ios-person-circle-outline' 
