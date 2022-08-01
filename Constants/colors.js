@@ -1,8 +1,20 @@
 export const GlobalStyles = {
     colors: {
-        primaryColor: '#030311',
-        secondaryColor: '#9197AE',
-        tertiaryColor: '#5626E4',
+        primaryColor: '#ffffff',
+        secondaryColor: 'gray',
+        tertiaryColor: '#a88558',
+        shadow: 'white'
     },
+    homeFeed: {
+        bgc: 'black'
+    },
+    HomeNavBar: {
+        primaryColor: 'white'
+    },
+    cal:{
+        selectedDay: '#d3d3d3'
+    }
 }
 
+//Gold: #a38f81
+//Gray: #4a3f37

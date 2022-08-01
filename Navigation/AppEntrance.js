@@ -28,12 +28,12 @@ function AppEntrance({navigation}){
           screenOptions={({navigation})=> ({
                headerShown: true,
                headerTransparent: true,
-               headerTintColor: GlobalStyles.colors.tertiaryColor,
+               headerTintColor: GlobalStyles.HomeNavBar.primaryColor,
                headerRight: ({tintColor}) => 
                     <IconButton 
                          icon='ios-person-circle-outline' 
                          size={30} 
-                         color={GlobalStyles.colors.tertiaryColor}
+                         color={GlobalStyles.HomeNavBar.primaryColor}
                          onPress={() => navigation.getParent('RightDrawer').openDrawer()}
                     />,
           })}

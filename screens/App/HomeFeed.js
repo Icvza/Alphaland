@@ -12,7 +12,7 @@ function Greeting(){
           <View style={styles.ImageContainer}>
                <ImageBackground 
                     style={styles.Image}
-                    source={require('../../Constants/Media/HomeScreen.jpg')}
+                    source={require('../../Constants/Media/bkroung.jpeg')}
                >
                     <Text style={styles.GreetingText}> Good Afternoon, Isaac</Text>
                </ImageBackground>
@@ -37,20 +37,25 @@ export default HomeFeed
 const styles = StyleSheet.create({
      HomeFeedContainer: {
           flex: 1,
-          backgroundColor: GlobalStyles.colors.secondaryColor
+          backgroundColor: GlobalStyles.homeFeed.bgc,
+          borderColor: 'black'
      },
      ImageContainer:{
-          borderRadius: 6, 
           elevation: 3,
-          shadowColor: 'blue',
+          shadowColor: GlobalStyles.colors.shadow,
           shadowRadius: 4,
           shadowOffset: { width: 1, height: 2},
           shadowOpacity: 0.4,
+          overflow:'hidden',
+          borderBottomLeftRadius: 10,
+          borderBottomRightRadius: 10
      },
      Image: {
           height: height,
           width: width,
           justifyContent: 'flex-end',
+          borderBottomLeftRadius: 50,
+
      },
      GreetingText:{
           color: 'white',
@@ -58,7 +63,9 @@ const styles = StyleSheet.create({
           alignSelf: 'flex-start',
           padding: 10,
           marginBottom: 40,
-          fontSize: 20
+          fontSize: 40,
+          fontFamily: 'bebas-Neue',
+          color: GlobalStyles.colors.primaryColor
      },
      calendar: {
           borderWidth: 3,

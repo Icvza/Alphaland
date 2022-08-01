@@ -22,14 +22,14 @@ function Class ({id, category, instructors }){
                          style={styles.Title}
                          title={CardTitle(category)}
                          subtitle={id + ' Tuesday 3:30Pm'}
-                         left={(props) => <Avatar.Icon {...props} icon="account-group" />}
+                         left={(props) => <Avatar.Icon {...props} icon="account-group" style={styles.AvatarIcon}/>}
                          right={(props) => <Card.Actions 
                                                   style={styles.ActionContainer}>
                                              <Button 
                                                   style={styles.Button}
                                                   mode='contained'>{<EvilIcons name='calendar' size={27} />}
                                              </Button>
-                                             <Button style={styles.secondButton}>ok</Button>
+                                             <Button><Text style={styles.textButton}>ok</Text></Button>
                                         </Card.Actions>}
                     />
                </Card>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
           width: '95%',
           borderRadius: 100, 
           elevation: 3,
-          shadowColor: 'blue',
+          shadowColor: GlobalStyles.colors.shadow,
           shadowRadius: 4,
           shadowOffset: { width: 1, height: 2},
           shadowOpacity: 0.4, 
@@ -64,5 +64,11 @@ const styles = StyleSheet.create({
      },
      Button:{
           backgroundColor: GlobalStyles.colors.tertiaryColor
+     },
+     AvatarIcon:{
+          backgroundColor: GlobalStyles.colors.tertiaryColor
+     },
+     textButton:{
+          color: GlobalStyles.colors.tertiaryColor
      }
 });
